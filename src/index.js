@@ -42,20 +42,19 @@ function updateCardsState( i, j) {
 			let l_j = last_j; // and is needed for getting the image card.
 
 			setTimeout(()=>{
-								if( lastClickedCard.data != clickedCard.data) {
+				if( lastClickedCard.data != clickedCard.data) {
 					lastClickedCard.style.display="block";
 					clickedCard.style.display="block";
 				} else {
 					document.getElementById("imageCard"+i+'_'+j).remove();
 					document.getElementById("imageCard"+l_i+'_'+l_j).remove();
 				}
-			}, 1000);
+			}, 500);
+		}
+
+		last_i=(last_i!=null)?null:i;
+		last_j=(last_j!=null)?null:j;
 	}
-
-	last_i=(last_i!=null)?null:i;
-	last_j=(last_j!=null)?null:j;
-}
-
 }
 
 var last_i, last_j;

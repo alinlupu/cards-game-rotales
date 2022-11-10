@@ -3,7 +3,7 @@ html {
 }
 
 .backsideCard {
-	background-image: radial-gradient(darkred 0%, tomato 100%);
+	background-image: radial-gradient(cyan 0%, tomato 100%);
 	border-radius: 10px;
 	border: solid;
 	border-width: 1px;
@@ -11,13 +11,19 @@ html {
 }
 
 #cards-section {
-    margin-top: 10%;
-    margin-left: 20%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+
+#table-wrapper {
+	width: 50%;
 }
 
 table {
-    padding: 5px;
+	padding: 2px;
     border: 1px transparent;
+	table-layout: fixed;
     user-select: none;
 }
 
@@ -27,12 +33,12 @@ tr {
 
 td {
     border: 1px transparent;
-    padding: 25px;
+    padding: 15px;
     caret-color: transparent;
     user-select: none;
     -moz-user-select: none;
-	width: 150px;
-	height: 200px;
+	width: 110px;
+	height: 170px;
 }
 
 td > div {
@@ -45,6 +51,6 @@ td > div {
 }
 
 td * {
-	width: 150px;
-	height: 200px;
+	width: 110px;
+	height: 150px;
 }
