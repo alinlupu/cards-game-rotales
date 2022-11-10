@@ -1,0 +1,32 @@
+html {
+    background-color: beige;
+}
+
+#cards-section {
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+table {
+    padding: 5px;
+    border: 1px transparent;
+    user-select: none;
+}
+
+tr {
+    user-select: none;
+}
+
+td {
+    border: 1px transparent;
+    padding: 25px;
+    caret-color: transparent;
+    user-select: none;
+    -moz-user-select: none;
+}
+
+td > img {
+    cursor: pointer;
+    user-select: none;
+    -moz-user-select: none;
+}
