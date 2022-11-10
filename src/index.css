@@ -1,5 +1,13 @@
 html {
-    background-color: beige;
+    background-color: black;
+}
+
+.backsideCard {
+	background-image: radial-gradient(darkred 0%, tomato 100%);
+	border-radius: 10px;
+	border: solid;
+	border-width: 1px;
+	border-color: gray;
 }
 
 #cards-section {
@@ -23,10 +31,20 @@ td {
     caret-color: transparent;
     user-select: none;
     -moz-user-select: none;
+	width: 150px;
+	height: 200px;
 }
 
-td > img {
+td > div {
     cursor: pointer;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
     user-select: none;
     -moz-user-select: none;
+}
+
+td * {
+	width: 150px;
+	height: 200px;
 }
