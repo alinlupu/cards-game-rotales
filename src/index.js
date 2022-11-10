@@ -70,6 +70,7 @@ function createTable( n, m ) {
 			backside.addEventListener("click", ()=>{
 				updateCardsState(i, j);
 			});
+
 			// Image Card 
 			const image = document.createElement("div");
 			image.id = "imageCard"+i+'_'+j;
