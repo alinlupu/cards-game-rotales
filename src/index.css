@@ -1,8 +1,25 @@
 html, body {
     background-color: black;
 	height: 100%;
+	width: 80%;
 	display: flex;
 	justify-content: center;
+}
+
+#info-section { 
+	width: 40%;
+}
+
+#cards-section {
+	
+}
+
+#card-name {
+	color:  white;
+	font-size: 40px;
+}
+#card-image {
+	border-color: transparent;
 }
 
 .backsideCard {

@@ -76,7 +76,7 @@ const data = {
     "path": "assets/VERDE_IMPARAT.png"
   },
   "20": {
-	"name": "Zburător",
+	"name": "Zburătorul",
     "path": "assets/ZBURATOR.png"
   },
   "21": {

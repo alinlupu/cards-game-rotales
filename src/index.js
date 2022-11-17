@@ -15,15 +15,15 @@ function getRandomCards( n ) {
 	}
 }
 
-function getPath() {
+function getRandomCard() {
 	if( cards.length == 0 ) return;
-	let i = Math.floor(Math.random()*(cards.length-1))
-	let card = cards[i]
+	let i = Math.floor(Math.random()*(cards.length-1));
+	let card = cards[i];
 	if( cards_freq[card] > 0 ) {
 		if( --cards_freq[card] == 0 ) {
 			cards.splice(i, 1);
 		}
-		return data[card].path;
+		return data[card];
 	} 
 }
 
@@ -46,7 +46,10 @@ function updateCardsState( i, j) {
 					lastClickedCard.style.display="block";
 					clickedCard.style.display="block";
 				} else {
-					document.getElementById("imageCard"+i+'_'+j).remove();
+					let c = document.getElementById("imageCard"+i+'_'+j);
+					document.getElementById("card-name").textContent = c.data.name;
+					document.getElementById("card-image").src = c.data.path;
+					c.remove();
 					document.getElementById("imageCard"+l_i+'_'+l_j).remove();
 				}
 			}, 500);
@@ -72,9 +75,11 @@ function createTable( n, m ) {
 			});
 
 			// Image Card 
+			let c = getRandomCard();
 			const image = document.createElement("div");
 			image.id = "imageCard"+i+'_'+j;
-			image.style.backgroundImage=`url('${getPath()}')`;
+			image.style.backgroundImage=`url('${c.path}')`;
+			image.data = c;
 			backside.data = image.style.backgroundImage;
 			image.appendChild( backside );
 
