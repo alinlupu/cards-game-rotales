@@ -2,6 +2,7 @@ html, body {
     background-color: black;
 	height: 98%;
 	width: 99%;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -117,6 +118,7 @@ header {
 #logo {
 	width: 300px;
 	position: absolute;
+	padding-left: 25px;
 	top: 100px;
 	transition: all 2s;
 }
