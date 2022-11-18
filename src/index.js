@@ -1,4 +1,16 @@
 import data from './data.js'
+import Logo from './logo.js'
+
+let logo = new Logo(document.getElementById("logo"));
+setTimeout( function(){ 
+	logo.move();
+}, 2000);
+
+const cardsSection = document.getElementById("cards-section");
+setTimeout( function(){
+	cardsSection.style.visibility = "visible";
+	cardsSection.style.opacity = "1";
+}, 4000);
 
 const parentTbl = document.getElementById("cards-table");
 var cards = []
