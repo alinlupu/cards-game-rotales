@@ -1,0 +1,97 @@
+html, body {
+    background-color: black;
+	height: 98%;
+	width: 99%;
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#info-section { 
+	width: 40%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+#card-name {
+	color:  white;
+	font-size: 30px;
+	margin-bottom: 20px;
+	margin-top: 0;
+	white-space: nowrap;
+	text-align: center;
+	z-index: 10;
+}
+
+#card-image {
+	border-color: transparent;
+	width: 30vw;
+	height: 65vh;
+	background-size: contain;
+	/*background-image: url('../assets/BABA_DOCHIA.png');*/
+	background-repeat: no-repeat;
+	background-position: center;
+	flex-grow: 3;
+}
+
+.confetti {
+	width: 90vw;
+	height: 90vh;
+	margin: 0 auto;
+	align-self: center;
+	border: 0px solid #ddd;
+	user-select: none;
+	position: absolute;
+}
+
+.backsideCard {
+	background-image: radial-gradient(cyan 0%, tomato 100%);
+	border-radius: 10px;
+	border: solid;
+	border-width: 1px;
+	border-color: gray;
+}
+
+#cards-section {
+	width: 60%;
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+table {
+	padding: 2px;
+	border: 1px transparent;
+	table-layout: fixed;
+	user-select: none;
+}
+
+tr {
+	user-select: none;
+}
+
+td {
+	border: 1px transparent;
+	padding: 0.5vw;
+	caret-color: transparent;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+td > div {
+	cursor: pointer;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	user-select: none;
+	-moz-user-select: none;
+}
+
+td * {
+	width: 10vw;
+	height: 13vw;
+}

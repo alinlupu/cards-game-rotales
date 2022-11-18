@@ -48,9 +48,10 @@ function updateCardsState( i, j) {
 				} else {
 					let c = document.getElementById("imageCard"+i+'_'+j);
 					document.getElementById("card-name").textContent = c.data.name;
-					document.getElementById("card-image").src = c.data.path;
+					document.getElementById("card-image").style.backgroundImage = `url('${c.data.path}')`;
 					c.remove();
 					document.getElementById("imageCard"+l_i+'_'+l_j).remove();
+					initConfetti();	
 				}
 			}, 500);
 		}
