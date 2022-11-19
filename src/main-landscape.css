@@ -13,7 +13,7 @@ body {
 }
 
 #info-section { 
-	width: 40%;
+	width: 50%;
 	padding-top: 20px;
 	display: flex;
 	flex-direction: column;
@@ -28,9 +28,10 @@ body {
 
 #intro-text {
 	position: absolute;	
-	font-size: 20px;
+	font-size: 1.5vw;
 	text-align: center;
-	top: 300px;
+	top: 30vh;
+	z-index: 5;
 }
 
 #card-name {
@@ -110,7 +111,7 @@ tr {
 
 td {
 	border: 1px transparent;
-	padding: 0.5vw;
+	padding: 0.3vw;
 	caret-color: transparent;
 	user-select: none;
 	-moz-user-select: none;
@@ -126,7 +127,7 @@ td > div {
 }
 
 td * {
-	width: 10vw;
+	width: 8vw;
 	height: 10vw;
 }
 
