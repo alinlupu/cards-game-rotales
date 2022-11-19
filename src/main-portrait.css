@@ -5,10 +5,33 @@ body {
 
 #info-section {
 	position: absolute;
+	padding-top: 0px;
+}
+
+footer {
+	display: none;
+}
+
+#logo {
+}
+
+#intro-header {
+	position: absolute;
+	display: block;
+	font-size: 15px;
+	text-align: center;
+	top: 12vh;
+}
+
+#intro-text {
+	font-size: 13px;
+	align-self: center;
+	top: 19vh;
 }
 
 #card-name {
 	font-size: 25px;
+	margin-bottom: 0px;
 }
 
 #card-image {
