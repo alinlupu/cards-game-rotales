@@ -1,12 +1,15 @@
 // Code source: https://www.codehim.com/animation-effects/javascript-confetti-explosion-effect/
 
+let Confetti = function() {
+}
+
 //-----------Var Inits--------------
-canvas = document.getElementById("canvas");
-ctx = canvas.getContext("2d");
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-cx = ctx.canvas.width / 2;
-cy = ctx.canvas.height / 2;
+let cx = ctx.canvas.width / 2;
+let cy = ctx.canvas.height / 2;
 
 let confetti = [];
 const confettiCount = 100;
@@ -25,16 +28,16 @@ const colors = [
 
 
 //-----------Functions--------------
-resizeCanvas = () => {
+let resizeCanvas = () => {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   cx = ctx.canvas.width / 2;
   cy = ctx.canvas.height / 2;
 };
 
-randomRange = (min, max) => Math.random() * (max - min) + min;
+let randomRange = (min, max) => Math.random() * (max - min) + min;
 
-initConfetti = () => {
+export let initConfetti = () => {
   for (let i = 0; i < confettiCount; i++) {
     confetti.push({
       color: colors[Math.floor(randomRange(0, colors.length))],
@@ -60,7 +63,7 @@ initConfetti = () => {
 };
 
 //---------Render-----------
-render = () => {
+let render = () => {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
   confetti.forEach((confetto, index) => {

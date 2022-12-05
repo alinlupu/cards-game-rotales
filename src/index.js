@@ -1,6 +1,8 @@
 import data from './data.js'
 import Logo from './logo.js'
+import {initConfetti} from './confetti.js'
 
+let STORAGE_URL = ( import.meta.env.PROD ) ? import.meta.env.VITE_STORAGE_URL : "./";
 
 let logo = new Logo(document.getElementById("logo"));
 setTimeout( function(){ 
@@ -67,10 +69,10 @@ function updateCardsState( i, j) {
 				} else {
 					let c = document.getElementById("imageCard"+i+'_'+j);
 					document.getElementById("card-name").textContent = c.data.name;
-					document.getElementById("card-image").style.backgroundImage = `url('${c.data.path}')`;
+					document.getElementById("card-image").style.backgroundImage = `url('${STORAGE_URL}${c.data.path}')`;
 					document.getElementById("intro-text").style.display = "none";
 					document.getElementById("intro-header").style.display = "none";
-					audioPlayer.src = c.data.audio_path;
+					audioPlayer.src = `${STORAGE_URL}${c.data.audio_path}`;
 					audioPlayer.style.visibility = "visible";
 					audioPlayer.play();
 					c.remove();
@@ -85,6 +87,7 @@ function updateCardsState( i, j) {
 	}
 }
 function createCard( i, j ) {
+	//TODO: Create this first, separately
 	// Backside Card 
 	const backside = document.createElement("div");
 	backside.id = "backsideCard"+i+'_'+j;
@@ -92,13 +95,14 @@ function createCard( i, j ) {
 	backside.addEventListener("click", ()=>{
 		updateCardsState(i, j);
 	});
+	backside.style.backgroundImage = `url("${STORAGE_URL}assets/backside.png")`;
 
 
 	// Image Card 
 	let c = selectRandomCard();
 	const image = document.createElement("div");
 	image.id = "imageCard"+i+'_'+j;
-	image.style.backgroundImage=`url('${c.path}')`;
+	image.style.backgroundImage=`url('${STORAGE_URL}${c.path}')`;
 	image.data = c;
 	backside.data = image.style.backgroundImage;
 	image.appendChild( backside );

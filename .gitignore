@@ -1,3 +1,6 @@
 *.zip
+.env*
 bkp
 build
+dist
+node_modules

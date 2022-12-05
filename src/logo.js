@@ -8,7 +8,9 @@ function Logo( _el ) {
 			_e.style.opacity = "0";
 		}, 1000);
 		setTimeout( function() {
-			_e.parentElement.style.justifyContent = "flex-start";
+			_e.parentElement.parentElement.style.justifyContent = "flex-start";
+			_e.style.position = "relative";
+			//document.getElementById("info-btn").style.display = "block";
 			_e.style.opacity = "1";
 		}, 2000);
 	}
